@@ -1,40 +1,113 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reflections — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reflections — FreshFind</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html" class="active">Reflections</a></nav>
-<div class="page-header"><h1>Reflections & Conclusion</h1><p>Lessons learned, what worked, and how FreshFind addresses user needs</p></div>
+<nav>
+  <span class="brand">🌿 FreshFind</span>
+  <a href="index.html">Home</a>
+  <a href="overview.html">Overview</a>
+  <a href="process.html">Design Process</a>
+  <a href="prototyping.html">Prototyping</a>
+  <a href="evaluation.html">Heuristic Eval</a>
+  <a href="reflections.html" class="active">Reflections</a>
+</nav>
+<div class="page-header"><h1>Reflections &amp; Conclusion</h1><p>Lessons learned, what worked, and how FreshFind addresses user needs</p></div>
 <main>
+ 
   <section>
     <h2>What Worked Well</h2>
     <div class="card-grid cols-2">
-      <div class="card"><h3>Evidence-First Design</h3><p>Grounding every design decision in a specific source finding — rather than intuition — made the rationale clear and defensible. When the AI Agent hypotheses were contradicted by NotebookLM sources, we had the evidence to make the right call.</p></div>
-      <div class="card"><h3>Dignity-First as a Design Constraint</h3><p>Treating "no login, no identity exposure" as a hard constraint — not a preference — forced creative solutions (FAB for frequent contributors, anonymous quick-tap) that improved the UX for everyone, not just stigma-sensitive users.</p></div>
-      <div class="card"><h3>Peer Heuristic Evaluation</h3><p>The FoodPath team found 10 real issues, including two severity-3 problems (blank map on slow connections, hidden undo button) that would have significantly degraded the experience. Fresh eyes matter.</p></div>
-      <div class="card"><h3>Storyboards as Design Anchors</h3><p>Having specific user scenarios (Joe, Marie, Steven) kept design decisions grounded in real use cases. When evaluating changes, asking "would this work for Joe?" was more useful than abstract principles.</p></div>
+      <div class="card">
+        <h3>Evidence-First Design Decisions</h3>
+        <p>Grounding every design decision in a specific research finding — rather than intuition — made every choice defensible. When the AI Agent hypotheses were contradicted by NotebookLM sources (e.g., the agent thought real-time accuracy was "nice to have"), the evidence made it easy to reject that assumption and prioritize correctly.</p>
+      </div>
+      <div class="card">
+        <h3>Dignity-First as a Hard Constraint</h3>
+        <p>Treating "no login, no identity exposure" as a non-negotiable constraint — not just a preference — produced better design outcomes. The 5-minute undo timer, the anonymous quick-tap menu, and the "Posted anonymously — no account needed" reassurance all came from taking this constraint seriously.</p>
+      </div>
+      <div class="card">
+        <h3>Peer Heuristic Evaluation</h3>
+        <p>The heuristic evaluation by Glenn Miller and others identified issues I had not noticed, especially H2 (language names in own script) and H3 (undo after status update). Both were severity 3 — high enough to require attention — and both were addressed before the final prototype. Fresh eyes consistently find what you stop seeing.</p>
+      </div>
+      <div class="card">
+        <h3>Concrete User Scenarios</h3>
+        <p>Having specific user scenarios — Joe needing food on his way home, Marie trying to read the app in Spanish, Steven wanting to warn neighbors — kept every design decision grounded. When evaluating a change, asking "would this work for Steven?" was more useful than asking "is this a good UX pattern in general?"</p>
+      </div>
     </div>
   </section>
+ 
   <section>
     <h2>What Could Be Improved</h2>
     <div class="card-grid cols-2">
-      <div class="card"><h3>Real User Testing</h3><p>All evaluation was peer-based, not with actual food desert residents. The most important next step is testing with real users in the South Bronx, East Harlem, and Central Brooklyn neighborhoods identified in Phase 2.</p></div>
-      <div class="card"><h3>Transit Integration Depth</h3><p>The route-based "Stop on My Way" filter was defined conceptually but not fully prototyped. Integrating real transit API data (MTA for NYC) would require significant technical validation beyond the scope of this phase.</p></div>
+      <div class="card">
+        <h3>Real User Testing</h3>
+        <p>All evaluation was done by peers, friends, and family — not actual food desert residents. The most important next step is testing with 5 real users from the South Bronx, East Harlem, and Central Brooklyn neighborhoods identified in Phase 2 research. Their feedback would likely surface friction points that no amount of peer review can predict.</p>
+      </div>
+      <div class="card">
+        <h3>Transit Integration</h3>
+        <p>The "En mi ruta / On My Way" filter was defined conceptually and appears in the prototype, but integrating real MTA transit schedule data would require significant technical work beyond the scope of this course. A future version would need to validate feasibility with the MTA's GTFS data feed and test with users who rely on public transit.</p>
+      </div>
     </div>
   </section>
+ 
   <section>
-    <h2>How the Final Prototype Addresses User Needs</h2>
+    <h2>How the Final Prototype Addresses Research Findings</h2>
     <table class="he-table">
-      <tr><th>Research Finding</th><th>Design Response</th><th>Status</th></tr>
-      <tr><td>F1: Stale data causes wasted trips</td><td>Community-verified timestamps on every listing; skeleton screen prevents blank-map confusion</td><td>✅ Resolved</td></tr>
-      <tr><td>F2: Route-based discovery needed</td><td>"Stop on My Way" filter defined; FAB enables quick contribution from any location</td><td>✅ Designed</td></tr>
-      <tr><td>F3: Food Mirage / affordability</td><td>SNAP/EBT tags on all listings; filterable from map home screen</td><td>✅ Resolved</td></tr>
-      <tr><td>F4: Transit deserts overlap</td><td>Directions view incorporates transit + carrying capacity; route accounts for bags</td><td>✅ Designed</td></tr>
-      <tr><td>F5: Stigma suppresses use</td><td>Zero login; anonymous contributions; dignity-preserving language throughout</td><td>✅ Resolved</td></tr>
-      <tr><td>F6: Community trust is highest</td><td>Anonymous one-tap updates; 5-min undo; prominent timestamp; FAB shortcut for frequent contributors</td><td>✅ Resolved</td></tr>
+      <tr><th>Research Finding</th><th>Design Response in Prototype</th><th>Status</th></tr>
+      <tr>
+        <td>F1: Stale data causes wasted trips</td>
+        <td>Every listing shows a community-verified timestamp ("Verified 9 min ago by a community member"). Submit button is disabled until a status is selected, preventing empty submissions.</td>
+        <td>✅ Resolved</td>
+      </tr>
+      <tr>
+        <td>F2: Route-based discovery needed</td>
+        <td>"En mi ruta / On My Way" filter pill visible in the map and list views. Conceptually designed; ready for backend implementation.</td>
+        <td>✅ Designed</td>
+      </tr>
+      <tr>
+        <td>F3: Food Mirage / affordability</td>
+        <td>SNAP/EBT accepted badge visible on every listing card and filterable from the map home screen. Users can immediately filter for affordable resources.</td>
+        <td>✅ Resolved</td>
+      </tr>
+      <tr>
+        <td>F4: Transit deserts overlap food deserts</td>
+        <td>Directions view shows walking routes with estimated time and open status visible at the destination. "On My Way" filter addresses commute-route discovery.</td>
+        <td>✅ Designed</td>
+      </tr>
+      <tr>
+        <td>F5: Stigma suppresses use</td>
+        <td>Zero login anywhere in the app. "Posted anonymously — no account needed" confirmation shown on every status submission. No contributor identity ever displayed.</td>
+        <td>✅ Resolved</td>
+      </tr>
+      <tr>
+        <td>F6: Community trust beats formal listings</td>
+        <td>Anonymous one-tap updates with prominent timestamp. 5-minute undo prevents bad data. Submit disabled until selection made, preventing accidental empty posts.</td>
+        <td>✅ Resolved</td>
+      </tr>
     </table>
   </section>
+ 
+  <section>
+    <h2>Heuristic Evaluation Impact</h2>
+    <table class="he-table">
+      <tr><th>Issue Found</th><th>Change Made</th><th>Impact</th></tr>
+      <tr><td>H1: Color-only pins</td><td>Added distinct shapes to each pin type (circle, square, diamond)</td><td>Accessibility for colorblind users</td></tr>
+      <tr><td>H2: English-only language screen</td><td>Each language shown in its own script with English translation below</td><td>Non-English speakers can now identify their language</td></tr>
+      <tr><td>H3: No way to undo a status post</td><td>Prominent "Undo my update" button with 5-minute countdown timer</td><td>Users can correct mistakes before others act on wrong info</td></tr>
+      <tr><td>H4: Too many words on listing cards</td><td>Key info above fold; icons added to action buttons</td><td>Faster scanning, less reading required</td></tr>
+      <tr><td>H5: Text-only buttons</td><td>Icons added: navigation arrow, pencil, status icons per option</td><td>Lower reading load for users with poor eyesight or low literacy</td></tr>
+    </table>
+  </section>
+ 
   <section>
     <h2>Next Steps</h2>
-    <p>If FreshFind were to continue into a Phase 4, the priorities would be: (1) usability testing with 5 real users from target neighborhoods; (2) technical feasibility assessment for MTA transit API integration; (3) partnership outreach to NYC food pantries for listing data; (4) accessibility audit (screen reader compatibility, color contrast verification across full prototype).</p>
+    <p>If FreshFind were to continue into a Phase 4, the priorities would be: (1) usability testing with 5 real users from food desert neighborhoods — South Bronx, East Harlem, Central Brooklyn; (2) MTA GTFS data integration for the "On My Way" route filter; (3) partnership outreach to NYC food pantries for listing data seeding; (4) accessibility audit for screen reader compatibility and WCAG color contrast compliance; (5) offline mode implementation for low-connectivity environments.</p>
   </section>
+ 
 </main>
-<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+<footer>
+  <p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp;
+  <a href="https://github.com/fredj04.github.io/FreshFind-hci">GitHub Repository</a></p>
+</footer>
 </body></html>
