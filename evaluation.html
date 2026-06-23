@@ -1,42 +1,127 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Heuristic Evaluation — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heuristic Evaluation — FreshFind</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html" class="active">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
-<div class="page-header"><h1>Heuristic Evaluation</h1><p>Nielsen's 10 Usability Heuristics — peer evaluation findings and design responses</p></div>
+<nav>
+  <span class="brand">🌿 FreshFind</span>
+  <a href="index.html">Home</a>
+  <a href="overview.html">Overview</a>
+  <a href="process.html">Design Process</a>
+  <a href="prototyping.html">Prototyping</a>
+  <a href="evaluation.html" class="active">Heuristic Eval</a>
+  <a href="reflections.html">Reflections</a>
+</nav>
+<div class="page-header"><h1>Heuristic Evaluation</h1><p>Nielsen's 10 Usability Heuristics — findings and design responses</p></div>
 <main>
+ 
   <section>
     <h2>Evaluation Setup</h2>
-    <p><strong>Evaluating team:</strong> FoodPath (peer team, community nutrition mapping project)</p>
-    <p><strong>Method:</strong> Independent review of all three task flows using Nielsen's 10 Usability Heuristics. Issues recorded on index cards with heuristic violated and severity rating (0=no problem, 4=catastrophe). Findings consolidated in group discussion.</p>
+    <div class="card-grid cols-2">
+      <div class="card">
+        <h3>Evaluators</h3>
+        <p><strong>Glenn Miller</strong> (peer, CSE 400) evaluated one of the three task flows independently. Friends and family evaluated the remaining flows. Each evaluator reviewed screens independently before findings were consolidated.</p>
+      </div>
+      <div class="card">
+        <h3>Method</h3>
+        <p>Nielsen's 10 Usability Heuristics. Issues recorded on index cards noting: which heuristic was violated and a severity rating. <strong>Severity scale: 1 = No problem, 2 = Cosmetic, 3 = Minor, 4 = Major, 5 = Catastrophe.</strong></p>
+      </div>
+    </div>
   </section>
+ 
   <section>
-    <h2>10 Issues Found</h2>
+    <h2>5 Issues Found</h2>
     <table class="he-table">
-      <tr><th>#</th><th>Heuristic</th><th>Issue</th><th>Sev.</th></tr>
-      <tr><td>H1</td><td>1 — Visibility of System Status</td><td>No loading indicator on map fetch — blank screen for 2–4 seconds on slow connections</td><td><span class="sev sev-3">3</span></td></tr>
-      <tr><td>H2</td><td>1 — Visibility of System Status</td><td>Timestamp "22 min ago" ambiguous — time zone and meaning of 'verified' unclear</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H3</td><td>3 — User Control & Freedom</td><td>No back button on language screen during first launch</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H4</td><td>4 — Consistency & Standards</td><td>Status colors inconsistent across Task 1 and Task 3 flows</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H5</td><td>5 — Error Prevention</td><td>Submit button too close to Cancel area on small screens</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H6</td><td>6 — Recognition over Recall</td><td>Active/inactive filter pills look nearly identical</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H7</td><td>7 — Flexibility & Efficiency</td><td>No shortcut for frequent contributors — 5-step navigation every time</td><td><span class="sev sev-2">2</span></td></tr>
-      <tr><td>H8</td><td>8 — Minimalist Design</td><td>Listing detail card has too much information above the fold</td><td><span class="sev sev-1">1</span></td></tr>
-      <tr><td>H9</td><td>9 — Help Recover from Errors</td><td>Undo option too small/hidden — a severity 3 usability issue</td><td><span class="sev sev-3">3</span></td></tr>
-      <tr><td>H10</td><td>10 — Help & Documentation</td><td>No onboarding tooltip explaining the community verification model</td><td><span class="sev sev-1">1</span></td></tr>
+      <tr><th>#</th><th>Heuristic Violated</th><th>Issue</th><th>Sev.</th></tr>
+      <tr>
+        <td>H1</td>
+        <td>4 — Consistency &amp; Standards</td>
+        <td>Each map pin is color-coded but not shape-differentiated. Colorblind users cannot distinguish between Open, Low Stock, and Closed pins.</td>
+        <td><span class="sev sev-1">1</span></td>
+      </tr>
+      <tr>
+        <td>H2</td>
+        <td>2 — Match Between System &amp; Real World</td>
+        <td>Non-English-speaking users would have trouble selecting their preferred language if all options are displayed only in English on the language screen.</td>
+        <td><span class="sev sev-2">3</span></td>
+      </tr>
+      <tr>
+        <td>H3</td>
+        <td>3 — User Control &amp; Freedom</td>
+        <td>Users who post an incorrect status update have no way to delete or correct it before other users see it and act on wrong information.</td>
+        <td><span class="sev sev-2">3</span></td>
+      </tr>
+      <tr>
+        <td>H4</td>
+        <td>8 — Aesthetic &amp; Minimalist Design</td>
+        <td>The listing detail cards contain too many words, making it harder to quickly find the key information (open status, hours, distance).</td>
+        <td><span class="sev sev-1">2</span></td>
+      </tr>
+      <tr>
+        <td>H5</td>
+        <td>6 — Recognition Rather Than Recall</td>
+        <td>Users with poor eyesight may find it hard to continuously read text on the screen. Icons alongside text labels would reduce cognitive load and reading effort.</td>
+        <td><span class="sev sev-1">1</span></td>
+      </tr>
     </table>
+ 
+    <div style="margin-top:1.2rem; padding:1rem 1.2rem; background:var(--mint); border-radius:8px; font-size:.9rem;">
+      <strong>Severity scale used:</strong> &nbsp;
+      <span class="sev sev-1" style="margin-right:.4rem">1</span> No problem &nbsp;·&nbsp;
+      <span class="sev sev-1" style="margin-right:.4rem; background:var(--yellow)">2</span> Cosmetic &nbsp;·&nbsp;
+      <span class="sev sev-2" style="margin-right:.4rem">3</span> Minor — low priority fix &nbsp;·&nbsp;
+      <span class="sev sev-3" style="margin-right:.4rem">4</span> Major — fix before release &nbsp;·&nbsp;
+      <span class="sev sev-4" style="margin-right:.4rem">5</span> Catastrophe — must fix before launch
+    </div>
   </section>
+ 
   <section>
     <h2>Design Changes Made in Response</h2>
-    <div class="change"><div class="change-head"><span class="change-id">C1</span><span class="change-ref">H1 · Sev. 3</span></div><p>Added skeleton-screen animation on map load — pulsing gray placeholder circles appear at pin locations while live data fetches.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C2</span><span class="change-ref">H2 · Sev. 2</span></div><p>Timestamp now reads "Community confirmed open · 22 min ago" with an info icon that opens a tooltip explaining the verification model.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C3</span><span class="change-ref">H3 · Sev. 2</span></div><p>Back/Skip button added to language selection screen. On first launch with no previous state, back defaults to "Skip — continue in English."</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C4</span><span class="change-ref">H4 · Sev. 2</span></div><p>Unified color system: green=open, yellow=closing, orange=out of stock, gray=closed, red=error only. Task 3 confirmation uses green for action success (labeled "Update submitted" to distinguish from resource state).</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C5</span><span class="change-ref">H5 · Sev. 2</span></div><p>Submit button enlarged (44→52px). Cancel moved to top-sheet text link, spatially separated from Submit to prevent fat-finger errors.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C6</span><span class="change-ref">H6 · Sev. 2</span></div><p>Active filter pills: filled green background + white text + checkmark icon. Inactive: white background + gray border. Contrast ratio now exceeds 4.5:1. Filled vs. outlined distinction supports colorblind users.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C7</span><span class="change-ref">H7 · Sev. 2</span></div><p>Added floating action button (FAB) on map view for quick 2-tap contribution. FAB chosen over dedicated tab to keep contribution secondary to discovery in navigation hierarchy.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C8</span><span class="change-ref">H8 · Sev. 1</span></div><p>Listing card redesigned with 4 visual tiers using progressive disclosure: (1) name+status, (2) hours+distance, (3) SNAP+timestamp, (4) notes+actions.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C9</span><span class="change-ref">H9 · Sev. 3</span></div><p>Undo promoted to outlined button with 5-minute countdown: "Undo available for 4:32." Timer sets clear expectations and reduces anxiety about accidental submissions.</p></div>
-    <div class="change"><div class="change-head"><span class="change-id">C10</span><span class="change-ref">H10 · Sev. 1</span></div><p>First-use tooltip on timestamp: "Community members keep this updated — tap to learn more." Shown once on first listing view, then dismissed and preference saved.</p></div>
+ 
+    <div class="change">
+      <div class="change-head">
+        <span class="change-id">C1</span>
+        <span class="change-ref">H1 · Heuristic 4 — Consistency &amp; Standards · Sev. 1</span>
+      </div>
+      <p>Map pins were redesigned to use different shapes AND different colors: green circle with a checkmark (Open), orange square with an exclamation mark (Low Stock / Closing Soon), red diamond with an X (Closed). This ensures colorblind users can differentiate pins by shape alone. The floating legend on the map home screen was updated to show both shape and color for each status.</p>
+    </div>
+ 
+    <div class="change">
+      <div class="change-head">
+        <span class="change-id">C2</span>
+        <span class="change-ref">H2 · Heuristic 2 — Match System &amp; Real World · Sev. 3</span>
+      </div>
+      <p>The language selection screen was updated so that each language is displayed in its own script — "Español" instead of "Spanish," "Kreyòl ayisyen" instead of "Haitian Creole," "中文" instead of "Chinese." A smaller English translation appears below each language name for users who can read both. This ensures that a Spanish speaker who cannot read English can still identify and select their language.</p>
+    </div>
+ 
+    <div class="change">
+      <div class="change-head">
+        <span class="change-id">C3</span>
+        <span class="change-ref">H3 · Heuristic 3 — User Control &amp; Freedom · Sev. 3</span>
+      </div>
+      <p>An "Undo my update" button was added to the confirmation screen. The button is clearly visible (outlined, not a small gray link) and includes a 5-minute countdown timer showing how long the undo option remains active: "Undo available for 4:56." Once the timer runs out, the button deactivates and disappears. If clicked, the user is returned to the quick-tap status menu to select the correct status. This directly addresses the concern about incorrect updates being seen and believed by other users.</p>
+    </div>
+ 
+    <div class="change">
+      <div class="change-head">
+        <span class="change-id">C4</span>
+        <span class="change-ref">H4 · Heuristic 8 — Aesthetic &amp; Minimalist Design · Sev. 2</span>
+      </div>
+      <p>Listing detail cards were simplified. The key information — resource name, open/closed status badge, and hours — was moved above the fold. Secondary details (distance, SNAP tag, community timestamp, staff note) appear below. Action buttons (Get Directions, Update Status) were given icons (a navigation arrow and a pencil respectively) to make their function immediately recognizable without reading the label.</p>
+    </div>
+ 
+    <div class="change">
+      <div class="change-head">
+        <span class="change-id">C5</span>
+        <span class="change-ref">H5 · Heuristic 6 — Recognition Rather Than Recall · Sev. 1</span>
+      </div>
+      <p>Icons were added to all primary action buttons throughout the app. The Get Directions button uses a navigation arrow (➤). The Update Status button uses a pencil icon. Status options in the quick-tap menu each have a paired icon: a checkmark for Open, a clock for Closing Soon, an X for Closed, and a warning triangle for Out of Fresh Produce. This reduces reading load for users with low literacy or poor eyesight.</p>
+    </div>
   </section>
+ 
 </main>
-<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+<footer>
+  <p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp;
+  <a href="https://github.com/fredj04.github.io/FreshFind-hci">GitHub Repository</a></p>
+</footer>
 </body></html>
