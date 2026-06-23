@@ -4,7 +4,7 @@
 Fred Joseph | SU ID: 2015596931
 
 ## Live Website
-[https://fredjoseph.github.io/freshfind-hci](https://fredjoseph.github.io/freshfind-hci)
+[https://fredj04.github.io/FreshFind-hci/](https://fredj04.github.io/FreshFind-hci/)
 
 ## Project Overview
 FreshFind is a mobile app concept designed to give food desert residents real-time access to food resources — pantries, soup kitchens, mobile produce vans — through community-powered anonymous updates, multilingual support, and low-bandwidth optimization.
@@ -26,7 +26,3 @@ FreshFind is a mobile app concept designed to give food desert residents real-ti
 ## Running Locally
 Open `index.html` in any browser. No build step required.
 
-## Enabling GitHub Pages
-1. Go to repository Settings → Pages
-2. Set source branch to `main`, folder to `/ (root)`
-3. Save — site will be available at `https://fredjoseph.github.io/freshfind-hci`
