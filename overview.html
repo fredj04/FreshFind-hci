@@ -1,32 +1,78 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overview — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — FreshFind</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html" class="active">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
-<div class="page-header"><h1>Project Overview</h1><p>Context, problem, users, and design goals</p></div>
+<nav>
+  <span class="brand">🌿 FreshFind</span>
+  <a href="index.html">Home</a>
+  <a href="overview.html" class="active">Overview</a>
+  <a href="process.html">Design Process</a>
+  <a href="prototyping.html">Prototyping</a>
+  <a href="evaluation.html">Heuristic Eval</a>
+  <a href="reflections.html">Reflections</a>
+</nav>
+<div class="page-header"><h1>Project Overview</h1><p>Context, problem, target users, and key features</p></div>
 <main>
   <section>
     <h2>The Problem: Food Deserts</h2>
-    <p>Approximately 19 million Americans live in food deserts — areas where residents have limited access to affordable, nutritious food. These areas are disproportionately low-income and urban. In New York City alone, 1.3 million residents face this reality. When grocery stores leave for more profitable areas, residents are left with fast food and dollar stores — or spend significant time and transit fare traveling for basic necessities.</p>
-    <p>Existing tools fail these communities in predictable ways: USDA databases are rarely updated, Google Maps lacks food pantry categories, and no app provides real-time, community-verified status in multiple languages.</p>
+    <p>Approximately 19 million Americans live in food deserts — areas where residents have limited access to affordable, nutritious food. These areas are disproportionately low-income and urban. In New York City alone, 1.3 million residents face this reality. When grocery stores leave for more profitable areas, residents are left relying on fast food, dollar stores, or spending significant time and transit fare traveling for basic necessities.</p>
+    <p>Existing tools fail these communities in predictable ways: USDA databases are rarely updated, Google Maps lacks dedicated food pantry categories, and no existing app provides real-time, community-verified status in multiple languages. There are also harder-to-see problems — the "Food Mirage" (nearby stores with unaffordable prices) and the "Food Swamp" (neighborhoods saturated with cheap processed options) — that a map alone cannot solve.</p>
   </section>
+ 
   <section>
     <h2>Target Users</h2>
     <div class="card-grid cols-3">
-      <div class="card"><div class="card-tag">Primary Users</div><h3>Food Desert Residents</h3><p>Low-income adults (25–65) in USDA-designated food deserts. Includes non-English speakers (especially Spanish-speaking households) and elderly users with limited smartphone experience.</p></div>
-      <div class="card"><div class="card-tag">Secondary Users</div><h3>Community Contributors</h3><p>Residents who pass by food resources regularly and can submit quick status updates. No account required — contribution is anonymous by design.</p></div>
-      <div class="card"><div class="card-tag">Stakeholders</div><h3>Pantry Staff & Operators</h3><p>Food pantry staff, mobile van operators, and social workers who manage listings and refer clients. They benefit from accurate, real-time data as much as users do.</p></div>
+      <div class="card">
+        <div class="card-tag">Primary Users</div>
+        <h3>Food Desert Residents</h3>
+        <p>Low-income adults (25–65) in USDA-designated food deserts, especially in NYC neighborhoods like the South Bronx, East Harlem, and Central Brooklyn. Includes non-English speakers (particularly Spanish-speaking households) and elderly users with limited smartphone experience.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Secondary Users</div>
+        <h3>Community Contributors</h3>
+        <p>Residents who pass by food resources regularly and can submit quick anonymous status updates — "Out of produce," "Closed today," "Long line." No account required. Their contributions are what make the platform trustworthy.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Stakeholders</div>
+        <h3>Pantry Staff &amp; Operators</h3>
+        <p>Food pantry staff, mobile van operators, and social workers who refer clients to food resources. They benefit from accurate, real-time data as much as users do — and can claim listings to post official updates.</p>
+      </div>
     </div>
   </section>
+ 
   <section>
     <h2>Key Features</h2>
     <div class="card-grid cols-2">
-      <div class="card"><h3>Real-Time Community Map</h3><p>Color-coded pins: green (open), yellow (closing soon), orange (out of stock), gray (closed). Every listing shows a community-verified timestamp so users know how fresh the data is.</p></div>
-      <div class="card"><h3>Anonymous Status Updates</h3><p>One-tap status reporting — no account, no login, under 10 seconds. Updates are live immediately. A 5-minute undo window protects against accidental submissions.</p></div>
-      <div class="card"><h3>Multilingual Support</h3><p>Language selection on first launch in 7 languages: English, Español, Kreyòl, 中文, العربية, Français, Русский. The entire app renders in the selected language — not just labels.</p></div>
-      <div class="card"><h3>Route-Based Discovery</h3><p>"Stop on My Way" filter finds food resources along a user's existing commute route — not just proximity. Based on research showing routine persistence among food desert residents.</p></div>
-      <div class="card"><h3>SNAP/EBT Tags</h3><p>All listings include SNAP/EBT acceptance status as a filterable tag. Addresses the "Food Mirage" finding: a store being nearby doesn't mean its prices are accessible.</p></div>
-      <div class="card"><h3>Low-Bandwidth Optimization</h3><p>Skeleton screen animations on load, minimal asset weights, and offline-friendly caching. Designed to work on older Android phones with limited data plans.</p></div>
+      <div class="card">
+        <h3>Real-Time Community Map</h3>
+        <p>Color-coded AND shape-differentiated pins: green circle with checkmark (open), orange square with exclamation (low stock), red diamond with X (closed). A floating legend is always visible. Every listing shows a community-verified timestamp so users know exactly how fresh the data is.</p>
+      </div>
+      <div class="card">
+        <h3>Anonymous Status Updates</h3>
+        <p>One-tap status reporting — no account, no login, under 10 seconds. Four options: Open, Closing Soon, Closed, Out of Fresh Produce. A 5-minute undo timer ("Undo available for 4:56") protects against accidental or incorrect submissions.</p>
+      </div>
+      <div class="card">
+        <h3>Multilingual Support</h3>
+        <p>Language selection on first launch in 8 languages, each shown in its own script: English, Español, Français, Kreyòl ayisyen (Haitian Creole), 中文, Português, Soomaali, Tiếng Việt. The entire app — filters, listing names, community notes, navigation instructions — renders in the selected language.</p>
+      </div>
+      <div class="card">
+        <h3>Route-Based Discovery</h3>
+        <p>"En mi ruta" / "On My Way" filter finds food resources along a user's existing commute route — not just by proximity. Based on research finding that residents shop near work and transit routes, not near home.</p>
+      </div>
+      <div class="card">
+        <h3>SNAP/EBT Tags</h3>
+        <p>All listings display SNAP/EBT acceptance status as a filterable badge. Addresses the "Food Mirage" finding: a store being nearby doesn't mean it's affordable. Users can filter for SNAP-accepting locations from the map home screen.</p>
+      </div>
+      <div class="card">
+        <h3>List View</h3>
+        <p>In addition to the map, a List tab shows all nearby resources in order of distance with status badges, community notes, and SNAP tags visible at a glance — for users who prefer scanning text over reading a map.</p>
+      </div>
     </div>
   </section>
 </main>
-<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+<footer>
+  <p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp;
+  <a href="https://github.com/fredj04/FreshFind-hci">GitHub Repository</a></p>
+</footer>
 </body></html>
