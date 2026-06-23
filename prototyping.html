@@ -1,49 +1,158 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prototyping — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prototyping — FreshFind</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html" class="active">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
-<div class="page-header"><h1>Prototyping</h1><p>High-fidelity screen flows for all three tasks</p></div>
+<nav>
+  <span class="brand">🌿 FreshFind</span>
+  <a href="index.html">Home</a>
+  <a href="overview.html">Overview</a>
+  <a href="process.html">Design Process</a>
+  <a href="prototyping.html" class="active">Prototyping</a>
+  <a href="evaluation.html">Heuristic Eval</a>
+  <a href="reflections.html">Reflections</a>
+</nav>
+<div class="page-header"><h1>Prototyping</h1><p>High-fidelity Figma screen flows for all three tasks</p></div>
 <main>
+ 
   <section>
-    <h2>Tools Used</h2>
+    <h2>Tools &amp; Approach</h2>
     <div class="card-grid cols-3">
-      <div class="card"><h3>Figma</h3><p>Primary prototyping tool. Interactive flows with component libraries, auto-layout, and prototype connections between screens.</p></div>
-      <div class="card"><h3>Phase 2 → Phase 3</h3><p>Storyboards from Phase 2 were refined based on peer presentation feedback before building high-fidelity screens.</p></div>
-      <div class="card"><h3>GitHub Pages</h3><p>Final prototype screens exported and embedded here. Figma prototype link available for interactive review.</p></div>
+      <div class="card">
+        <h3>Figma</h3>
+        <p>Primary prototyping tool. All three task flows were built as interactive Figma prototypes with component libraries, auto-layout, and clickable connections between screens. Prototype link: <a href="https://fredj04.github.io/FreshFind-hci/" style="color:var(--moss)">available in the repository</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 2 → Phase 3 Refinements</h3>
+        <p>Storyboards from Phase 2 were iterated based on two rounds of feedback: (1) peer presentation feedback — add different shapes to map pins, show languages in their own script; (2) heuristic evaluation — add undo button with timer, simplify listing cards, add icons to buttons.</p>
+      </div>
+      <div class="card">
+        <h3>What Changed from Phase 2</h3>
+        <p>Map pins now use different shapes AND colors for accessibility. Language picker shows scripts (Español not "Spanish"). Confirmation screen has a prominent "Undo my update" button with a 5-minute countdown. Listing cards are simplified with icons on action buttons.</p>
+      </div>
     </div>
   </section>
-
+ 
   <section>
-    <h2>Task 1 — Check If a Pantry Is Open</h2>
-    <p><em>Phase 2 feedback incorporated: pin legend visible on map load; last-verified timestamp shown on card before tapping.</em></p>
+    <h2>Task 1 — Check If a Nearby Pantry Is Open</h2>
+    <p><em>Phase 2 feedback applied: pins now use different shapes AND colors (green circle ✓ = open, orange square ! = low stock, red diamond ✗ = closed) so colorblind users can also distinguish them. Legend card always visible on map home.</em></p>
     <div class="screen-flow">
-      <div class="screen-card"><div class="screen-bar">Screen 1 — Map Home</div><div class="screen-mockup">[Figma frame: map home]</div><div class="screen-body"><strong>Map Home</strong><p>Green/yellow/gray pins · floating legend · active filter pills · no login screen on open</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 2 — Status Card</div><div class="screen-mockup">[Figma frame: status card]</div><div class="screen-body"><strong>Status Card</strong><p>Name · OPEN badge · hours · distance · SNAP · "Verified 22 min ago" · Directions CTA</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 3 — Directions</div><div class="screen-mockup">[Figma frame: directions]</div><div class="screen-body"><strong>Directions View</strong><p>Transit + walking route · "Closes in 43 min" countdown banner</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 4 — Arrival</div><div class="screen-mockup">[Figma frame: arrival]</div><div class="screen-body"><strong>Arrival Check</strong><p>"Is this place open?" · Yes updates timestamp · No opens Task 3 flow</p></div></div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 1 — Map Home</div>
+        <div class="screen-mockup">[ Figma screen: Map Home ]</div>
+        <div class="screen-body">
+          <strong>Map Home</strong>
+          <p>Shape + color pins · floating legend · "Open Now," "Walking Distance," "SNAP/EBT" filter pills · no login screen · + FAB button for quick updates</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 2 — Pantry Detail</div>
+        <div class="screen-mockup">[ Figma screen: Pantry Detail ]</div>
+        <div class="screen-body">
+          <strong>Pantry Detail Card</strong>
+          <p>Resource name · "Open until 7:00 PM" badge · "Verified 9 min ago by a community member" · 0.3 mi walk · SNAP/EBT accepted · weekly hours · Get Directions + Update Status buttons with icons</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 3 — Directions</div>
+        <div class="screen-mockup">[ Figma screen: Directions ]</div>
+        <div class="screen-body">
+          <strong>Directions View</strong>
+          <p>Turn-by-turn walking directions · street names shown on map · estimated time (10 min walk) · "Open" status badge visible at bottom · Start Navigation button</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 4 — List View</div>
+        <div class="screen-mockup">[ Figma screen: List View ]</div>
+        <div class="screen-body">
+          <strong>List View</strong>
+          <p>All nearby resources as scrollable cards · status badge · distance · SNAP tag · community note preview · "5 resources found" count</p>
+        </div>
+      </div>
     </div>
   </section>
-
+ 
   <section>
     <h2>Task 2 — Switch App Language</h2>
-    <p><em>Phase 2 feedback incorporated: languages shown in their own script; Haitian Creole (Kreyòl) added for NYC demographics.</em></p>
+    <p><em>Phase 2 feedback applied: language names now shown in their own script (Español, Français, Kreyòl ayisyen, 中文, etc.). Haitian Creole added given NYC's Haitian community. "Skip — continue in English" option added so users are never trapped on the screen.</em></p>
     <div class="screen-flow">
-      <div class="screen-card"><div class="screen-bar">Screen 1 — Language Picker</div><div class="screen-mockup">[Figma frame: language picker]</div><div class="screen-body"><strong>Language Selection</strong><p>English · Español · Kreyòl · 中文 · العربية · Français · Русский</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 2 — Spanish Home</div><div class="screen-mockup">[Figma frame: Spanish home]</div><div class="screen-body"><strong>Spanish Home</strong><p>Full app in Spanish · Buscar despensas... · filter pills translated</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 3 — Spanish Results</div><div class="screen-mockup">[Figma frame: Spanish results]</div><div class="screen-body"><strong>Spanish Results</strong><p>Listing cards in Spanish · SNAP aceptado ✓ · walking times</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 4 — Spanish Detail</div><div class="screen-mockup">[Figma frame: Spanish detail]</div><div class="screen-body"><strong>Spanish Detail</strong><p>Full listing in Spanish · Última verificación · Obtener direcciones</p></div></div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 1 — Language Picker</div>
+        <div class="screen-mockup">[ Figma screen: Language Picker ]</div>
+        <div class="screen-body">
+          <strong>Language Selection</strong>
+          <p>8 languages with own-script names · country flag codes · English translation below each · "Continue" disabled until selection · "Skip — continue in English" at top</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 2 — Spanish Map</div>
+        <div class="screen-mockup">[ Figma screen: Spanish Map ]</div>
+        <div class="screen-body">
+          <strong>Map in Español</strong>
+          <p>"Buscar comida cerca de ti..." · filter pills: "Abierto Ahora," "A pie," "SNAP/EBT," "En mi ruta" · pin legend in Spanish</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 3 — Spanish List</div>
+        <div class="screen-mockup">[ Figma screen: Spanish List ]</div>
+        <div class="screen-body">
+          <strong>Lista in Español</strong>
+          <p>"3 recursos encontrados" · "Banco de Alimentos Mission" · status: Abierto/Cerrando pronto/Cerrado · community note: "Queda poca verdura fresca — hace 5 min"</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 4 — Spanish Detail</div>
+        <div class="screen-mockup">[ Figma screen: Spanish Detail ]</div>
+        <div class="screen-body">
+          <strong>Detalle in Español</strong>
+          <p>"Despensa Mott Haven" · "Abierta hasta las 7:00 PM" · "Confirmado por la comunidad · hace 23 min" · "Cómo llegar" · "Actualizar estado"</p>
+        </div>
+      </div>
     </div>
   </section>
-
+ 
   <section>
-    <h2>Task 3 — Submit a Status Update</h2>
-    <p><em>Phase 2 feedback incorporated: optional note field added; undo button made prominent with 5-minute countdown timer.</em></p>
+    <h2>Task 3 — Submit a Real-Time Status Update</h2>
+    <p><em>Phase 2 feedback applied: "Undo my update" is now a clearly visible outlined button (not a small gray link) with a 5-minute countdown timer — "Undo available for 4:56." Clicking undo returns you to the quick-tap status menu to select the correct status.</em></p>
     <div class="screen-flow">
-      <div class="screen-card"><div class="screen-bar">Screen 1 — Entry Point</div><div class="screen-mockup">[Figma frame: entry point]</div><div class="screen-body"><strong>Listing + Entry</strong><p>"Update status" link · "No account required" label</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 2 — Status Menu</div><div class="screen-mockup">[Figma frame: status menu]</div><div class="screen-body"><strong>Quick-Tap Menu</strong><p>4 large tiles: Open · Closed · Closing soon · Out of produce · optional note field</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 3 — Confirmation</div><div class="screen-mockup">[Figma frame: confirmation]</div><div class="screen-body"><strong>Confirmation</strong><p>"Update shared — thank you!" · no identity shown · Undo button + 5-min countdown</p></div></div>
-      <div class="screen-card"><div class="screen-bar">Screen 4 — Map Updated</div><div class="screen-mockup">[Figma frame: map updated]</div><div class="screen-body"><strong>Map Updated</strong><p>Pin color updated · community note bubble · live for all nearby users</p></div></div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 1 — Update Entry</div>
+        <div class="screen-mockup">[ Figma screen: Update Entry ]</div>
+        <div class="screen-body">
+          <strong>Listing + Entry Point</strong>
+          <p>"Update Status" primary button · "Verified 22 min ago — tap to update" timestamp · status shown: Fresh Produce Available · no login prompt anywhere</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 2 — Status Menu</div>
+        <div class="screen-mockup">[ Figma screen: Status Menu ]</div>
+        <div class="screen-body">
+          <strong>Quick-Tap Status Menu</strong>
+          <p>"What's the status right now?" · 4 options with shape + color icons: Open ✓, Closing Soon ⏰, Closed ✗, Out of Fresh Produce △ · "Posted anonymously — no account needed" · Submit Update (disabled until selection)</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 3 — Confirmation</div>
+        <div class="screen-mockup">[ Figma screen: Confirmation ]</div>
+        <div class="screen-body">
+          <strong>Confirmation Screen</strong>
+          <p>Green checkmark · "Update Shared!" · "Your neighbors can now see this." · "This listing now shows: Out of Fresh Produce" · prominent "Undo my update" button · "Undo available for 4:56" countdown · Done button</p>
+        </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-bar">Screen 4 — Spanish Version</div>
+        <div class="screen-mockup">[ Figma screen: Spanish Confirmation ]</div>
+        <div class="screen-body">
+          <strong>Same Flow in Español</strong>
+          <p>"¿Cuál es el estado ahora?" · "Abierto / Cerrando pronto / Cerrado / Sin productos frescos" · "¡Actualización compartida!" · "Deshacer mi actualización" · countdown in Spanish</p>
+        </div>
+      </div>
     </div>
   </section>
+ 
 </main>
-<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+<footer>
+  <p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp;
+  <a href="https://github.com/fredj04/FreshFind-hci">GitHub Repository</a></p>
+</footer>
 </body></html>
