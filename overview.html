@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overview — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html" class="active">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
+<div class="page-header"><h1>Project Overview</h1><p>Context, problem, users, and design goals</p></div>
+<main>
+  <section>
+    <h2>The Problem: Food Deserts</h2>
+    <p>Approximately 19 million Americans live in food deserts — areas where residents have limited access to affordable, nutritious food. These areas are disproportionately low-income and urban. In New York City alone, 1.3 million residents face this reality. When grocery stores leave for more profitable areas, residents are left with fast food and dollar stores — or spend significant time and transit fare traveling for basic necessities.</p>
+    <p>Existing tools fail these communities in predictable ways: USDA databases are rarely updated, Google Maps lacks food pantry categories, and no app provides real-time, community-verified status in multiple languages.</p>
+  </section>
+  <section>
+    <h2>Target Users</h2>
+    <div class="card-grid cols-3">
+      <div class="card"><div class="card-tag">Primary Users</div><h3>Food Desert Residents</h3><p>Low-income adults (25–65) in USDA-designated food deserts. Includes non-English speakers (especially Spanish-speaking households) and elderly users with limited smartphone experience.</p></div>
+      <div class="card"><div class="card-tag">Secondary Users</div><h3>Community Contributors</h3><p>Residents who pass by food resources regularly and can submit quick status updates. No account required — contribution is anonymous by design.</p></div>
+      <div class="card"><div class="card-tag">Stakeholders</div><h3>Pantry Staff & Operators</h3><p>Food pantry staff, mobile van operators, and social workers who manage listings and refer clients. They benefit from accurate, real-time data as much as users do.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Key Features</h2>
+    <div class="card-grid cols-2">
+      <div class="card"><h3>Real-Time Community Map</h3><p>Color-coded pins: green (open), yellow (closing soon), orange (out of stock), gray (closed). Every listing shows a community-verified timestamp so users know how fresh the data is.</p></div>
+      <div class="card"><h3>Anonymous Status Updates</h3><p>One-tap status reporting — no account, no login, under 10 seconds. Updates are live immediately. A 5-minute undo window protects against accidental submissions.</p></div>
+      <div class="card"><h3>Multilingual Support</h3><p>Language selection on first launch in 7 languages: English, Español, Kreyòl, 中文, العربية, Français, Русский. The entire app renders in the selected language — not just labels.</p></div>
+      <div class="card"><h3>Route-Based Discovery</h3><p>"Stop on My Way" filter finds food resources along a user's existing commute route — not just proximity. Based on research showing routine persistence among food desert residents.</p></div>
+      <div class="card"><h3>SNAP/EBT Tags</h3><p>All listings include SNAP/EBT acceptance status as a filterable tag. Addresses the "Food Mirage" finding: a store being nearby doesn't mean its prices are accessible.</p></div>
+      <div class="card"><h3>Low-Bandwidth Optimization</h3><p>Skeleton screen animations on load, minimal asset weights, and offline-friendly caching. Designed to work on older Android phones with limited data plans.</p></div>
+    </div>
+  </section>
+</main>
+<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+</body></html>

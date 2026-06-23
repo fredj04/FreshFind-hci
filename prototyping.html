@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prototyping — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html" class="active">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
+<div class="page-header"><h1>Prototyping</h1><p>High-fidelity screen flows for all three tasks</p></div>
+<main>
+  <section>
+    <h2>Tools Used</h2>
+    <div class="card-grid cols-3">
+      <div class="card"><h3>Figma</h3><p>Primary prototyping tool. Interactive flows with component libraries, auto-layout, and prototype connections between screens.</p></div>
+      <div class="card"><h3>Phase 2 → Phase 3</h3><p>Storyboards from Phase 2 were refined based on peer presentation feedback before building high-fidelity screens.</p></div>
+      <div class="card"><h3>GitHub Pages</h3><p>Final prototype screens exported and embedded here. Figma prototype link available for interactive review.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Task 1 — Check If a Pantry Is Open</h2>
+    <p><em>Phase 2 feedback incorporated: pin legend visible on map load; last-verified timestamp shown on card before tapping.</em></p>
+    <div class="screen-flow">
+      <div class="screen-card"><div class="screen-bar">Screen 1 — Map Home</div><div class="screen-mockup">[Figma frame: map home]</div><div class="screen-body"><strong>Map Home</strong><p>Green/yellow/gray pins · floating legend · active filter pills · no login screen on open</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 2 — Status Card</div><div class="screen-mockup">[Figma frame: status card]</div><div class="screen-body"><strong>Status Card</strong><p>Name · OPEN badge · hours · distance · SNAP · "Verified 22 min ago" · Directions CTA</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 3 — Directions</div><div class="screen-mockup">[Figma frame: directions]</div><div class="screen-body"><strong>Directions View</strong><p>Transit + walking route · "Closes in 43 min" countdown banner</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 4 — Arrival</div><div class="screen-mockup">[Figma frame: arrival]</div><div class="screen-body"><strong>Arrival Check</strong><p>"Is this place open?" · Yes updates timestamp · No opens Task 3 flow</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Task 2 — Switch App Language</h2>
+    <p><em>Phase 2 feedback incorporated: languages shown in their own script; Haitian Creole (Kreyòl) added for NYC demographics.</em></p>
+    <div class="screen-flow">
+      <div class="screen-card"><div class="screen-bar">Screen 1 — Language Picker</div><div class="screen-mockup">[Figma frame: language picker]</div><div class="screen-body"><strong>Language Selection</strong><p>English · Español · Kreyòl · 中文 · العربية · Français · Русский</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 2 — Spanish Home</div><div class="screen-mockup">[Figma frame: Spanish home]</div><div class="screen-body"><strong>Spanish Home</strong><p>Full app in Spanish · Buscar despensas... · filter pills translated</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 3 — Spanish Results</div><div class="screen-mockup">[Figma frame: Spanish results]</div><div class="screen-body"><strong>Spanish Results</strong><p>Listing cards in Spanish · SNAP aceptado ✓ · walking times</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 4 — Spanish Detail</div><div class="screen-mockup">[Figma frame: Spanish detail]</div><div class="screen-body"><strong>Spanish Detail</strong><p>Full listing in Spanish · Última verificación · Obtener direcciones</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Task 3 — Submit a Status Update</h2>
+    <p><em>Phase 2 feedback incorporated: optional note field added; undo button made prominent with 5-minute countdown timer.</em></p>
+    <div class="screen-flow">
+      <div class="screen-card"><div class="screen-bar">Screen 1 — Entry Point</div><div class="screen-mockup">[Figma frame: entry point]</div><div class="screen-body"><strong>Listing + Entry</strong><p>"Update status" link · "No account required" label</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 2 — Status Menu</div><div class="screen-mockup">[Figma frame: status menu]</div><div class="screen-body"><strong>Quick-Tap Menu</strong><p>4 large tiles: Open · Closed · Closing soon · Out of produce · optional note field</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 3 — Confirmation</div><div class="screen-mockup">[Figma frame: confirmation]</div><div class="screen-body"><strong>Confirmation</strong><p>"Update shared — thank you!" · no identity shown · Undo button + 5-min countdown</p></div></div>
+      <div class="screen-card"><div class="screen-bar">Screen 4 — Map Updated</div><div class="screen-mockup">[Figma frame: map updated]</div><div class="screen-body"><strong>Map Updated</strong><p>Pin color updated · community note bubble · live for all nearby users</p></div></div>
+    </div>
+  </section>
+</main>
+<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+</body></html>

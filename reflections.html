@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reflections — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html" class="active">Reflections</a></nav>
+<div class="page-header"><h1>Reflections & Conclusion</h1><p>Lessons learned, what worked, and how FreshFind addresses user needs</p></div>
+<main>
+  <section>
+    <h2>What Worked Well</h2>
+    <div class="card-grid cols-2">
+      <div class="card"><h3>Evidence-First Design</h3><p>Grounding every design decision in a specific source finding — rather than intuition — made the rationale clear and defensible. When the AI Agent hypotheses were contradicted by NotebookLM sources, we had the evidence to make the right call.</p></div>
+      <div class="card"><h3>Dignity-First as a Design Constraint</h3><p>Treating "no login, no identity exposure" as a hard constraint — not a preference — forced creative solutions (FAB for frequent contributors, anonymous quick-tap) that improved the UX for everyone, not just stigma-sensitive users.</p></div>
+      <div class="card"><h3>Peer Heuristic Evaluation</h3><p>The FoodPath team found 10 real issues, including two severity-3 problems (blank map on slow connections, hidden undo button) that would have significantly degraded the experience. Fresh eyes matter.</p></div>
+      <div class="card"><h3>Storyboards as Design Anchors</h3><p>Having specific user scenarios (Joe, Marie, Steven) kept design decisions grounded in real use cases. When evaluating changes, asking "would this work for Joe?" was more useful than abstract principles.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>What Could Be Improved</h2>
+    <div class="card-grid cols-2">
+      <div class="card"><h3>Real User Testing</h3><p>All evaluation was peer-based, not with actual food desert residents. The most important next step is testing with real users in the South Bronx, East Harlem, and Central Brooklyn neighborhoods identified in Phase 2.</p></div>
+      <div class="card"><h3>Transit Integration Depth</h3><p>The route-based "Stop on My Way" filter was defined conceptually but not fully prototyped. Integrating real transit API data (MTA for NYC) would require significant technical validation beyond the scope of this phase.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>How the Final Prototype Addresses User Needs</h2>
+    <table class="he-table">
+      <tr><th>Research Finding</th><th>Design Response</th><th>Status</th></tr>
+      <tr><td>F1: Stale data causes wasted trips</td><td>Community-verified timestamps on every listing; skeleton screen prevents blank-map confusion</td><td>✅ Resolved</td></tr>
+      <tr><td>F2: Route-based discovery needed</td><td>"Stop on My Way" filter defined; FAB enables quick contribution from any location</td><td>✅ Designed</td></tr>
+      <tr><td>F3: Food Mirage / affordability</td><td>SNAP/EBT tags on all listings; filterable from map home screen</td><td>✅ Resolved</td></tr>
+      <tr><td>F4: Transit deserts overlap</td><td>Directions view incorporates transit + carrying capacity; route accounts for bags</td><td>✅ Designed</td></tr>
+      <tr><td>F5: Stigma suppresses use</td><td>Zero login; anonymous contributions; dignity-preserving language throughout</td><td>✅ Resolved</td></tr>
+      <tr><td>F6: Community trust is highest</td><td>Anonymous one-tap updates; 5-min undo; prominent timestamp; FAB shortcut for frequent contributors</td><td>✅ Resolved</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2>Next Steps</h2>
+    <p>If FreshFind were to continue into a Phase 4, the priorities would be: (1) usability testing with 5 real users from target neighborhoods; (2) technical feasibility assessment for MTA transit API integration; (3) partnership outreach to NYC food pantries for listing data; (4) accessibility audit (screen reader compatibility, color contrast verification across full prototype).</p>
+  </section>
+</main>
+<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+</body></html>
