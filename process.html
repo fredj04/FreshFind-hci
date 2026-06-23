@@ -1,36 +1,125 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Process — FreshFind</title><link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Process — FreshFind</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><span class="brand">🌿 FreshFind</span><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="process.html" class="active">Design Process</a><a href="prototyping.html">Prototyping</a><a href="evaluation.html">Heuristic Eval</a><a href="reflections.html">Reflections</a></nav>
-<div class="page-header"><h1>Design Process</h1><p>Research, findings, personas, storyboards, and design decisions</p></div>
+<nav>
+  <span class="brand">🌿 FreshFind</span>
+  <a href="index.html">Home</a>
+  <a href="overview.html">Overview</a>
+  <a href="process.html" class="active">Design Process</a>
+  <a href="prototyping.html">Prototyping</a>
+  <a href="evaluation.html">Heuristic Eval</a>
+  <a href="reflections.html">Reflections</a>
+</nav>
+<div class="page-header"><h1>Design Process</h1><p>Research findings, storyboards, tasks, and design decisions — Phase 1 through Phase 3</p></div>
 <main>
+ 
   <section>
-    <h2>Six Evidence-Based Findings (Phase 2)</h2>
-    <div class="finding"><span class="num">F1</span><div class="text"><strong>Stale data causes wasted trips</strong><span>Users arrive at pantries listed as open only to find them closed. This is the #1 reason people abandon food-finding apps.</span><span class="src">Source: Reddit/r/foodbank · App reviews (Plentiful)</span></div></div>
-    <div class="finding"><span class="num">F2</span><div class="text"><strong>Route-based discovery, not just proximity</strong><span>Routine persistence means people shop along commutes, not near home. "Nearest resource" filters are insufficient.</span><span class="src">Source: NotebookLM Synthesis (Routine Persistence section)</span></div></div>
-    <div class="finding"><span class="num">F3</span><div class="text"><strong>The Food Mirage</strong><span>Nearby stores exist but prices are unaffordable. Dollar stores and fast food saturate neighborhoods. SNAP/EBT tags are essential from v1.</span><span class="src">Source: NotebookLM Synthesis · Reddit/r/povertyfinance</span></div></div>
-    <div class="finding"><span class="num">F4</span><div class="text"><strong>Transit deserts overlap food deserts</strong><span>Map distance is meaningless without transit data. Carrying capacity (bags, children) adds additional constraints.</span><span class="src">Source: Feeding America · NotebookLM Synthesis</span></div></div>
-    <div class="finding"><span class="num">F5</span><div class="text"><strong>Stigma suppresses use of visible resources</strong><span>Users described relief when no ID or account was required. Shame affects whether people seek assistance at all.</span><span class="src">Source: Reddit/r/SNAP · Needfinding Guide Category 4</span></div></div>
-    <div class="finding"><span class="num">F6</span><div class="text"><strong>Community trust beats formal listings</strong><span>COVID-era mutual aid proved communities share accurate food info when given easy tools. Frictionless anonymous updates are the core trust mechanism.</span><span class="src">Source: Feeding America 2023 · Reddit community threads</span></div></div>
+    <h2>Phase 1: Problem Ideation</h2>
+    <p>Three design directions were explored before narrowing to a final concept:</p>
+    <div class="card-grid cols-3">
+      <div class="card"><div class="card-tag">Idea 1</div><h3>Real-Time Community Map</h3><p>Interactive map with live status pins contributed anonymously by community members. Filter by distance, food type, and language.</p></div>
+      <div class="card"><div class="card-tag">Idea 2</div><h3>Personalized Resource Feed</h3><p>Home-screen feed that learns your schedule and neighborhood to proactively surface nearby food events and pantry hours.</p></div>
+      <div class="card"><div class="card-tag">Idea 3</div><h3>Community-Verified Directory</h3><p>Crowdsourced, multilingual directory where volunteers add and verify listings. Offline-capable for low-bandwidth environments.</p></div>
+    </div>
   </section>
+ 
+  <section>
+    <h2>Phase 2: Six Evidence-Based Findings</h2>
+    <p>Research was conducted using NotebookLM (with uploaded sources including the food desert synthesis document and Needfinding Question Bank), the CSE 400 Needfinding AI Agent, Reddit communities (r/foodbank, r/povertyfinance, r/SNAP), Feeding America reports, Pew Research, and app store reviews for Plentiful, Ample Harvest, and Find Food Help.</p>
+ 
+    <div class="finding">
+      <span class="num">F1</span>
+      <div class="text">
+        <strong>Stale data causes wasted trips — the #1 reason people abandon food apps</strong>
+        <span>Reddit's r/foodbank documents users arriving at pantries listed as open only to find them closed or relocated. One user described having to call a volunteer personally for accurate hours. App reviews for Plentiful cite outdated information as the top reason for abandonment.</span>
+        <span class="src">Source: Reddit/r/foodbank · App Store reviews (Plentiful)</span>
+      </div>
+    </div>
+ 
+    <div class="finding">
+      <span class="num">F2</span>
+      <div class="text">
+        <strong>Routine persistence — people shop along commutes, not near home</strong>
+        <span>The NotebookLM synthesis found that opening a new food resource nearby doesn't automatically change behavior. Residents shop along existing commute routes. A proximity-only filter is insufficient — route-based discovery is needed.</span>
+        <span class="src">Source: NotebookLM Synthesis (Routine Persistence section)</span>
+      </div>
+    </div>
+ 
+    <div class="finding">
+      <span class="num">F3</span>
+      <div class="text">
+        <strong>The Food Mirage — nearby stores exist but prices are unaffordable</strong>
+        <span>The synthesis identifies the "Food Mirage": stores are geographically close but prices are out of reach for low-income families. Dollar stores and fast food dominate, habituating residents to processed food. SNAP/EBT tags are essential in version one.</span>
+        <span class="src">Source: NotebookLM Synthesis · Reddit/r/povertyfinance</span>
+      </div>
+    </div>
+ 
+    <div class="finding">
+      <span class="num">F4</span>
+      <div class="text">
+        <strong>Transit deserts overlap food deserts — map distance is misleading</strong>
+        <span>Feeding America research confirms heavy overlap between transit deserts and food deserts. For users without cars, "0.3 mi" on a map may mean a 45-minute bus trip. Carrying capacity (bags, children, weather) adds further constraints.</span>
+        <span class="src">Source: Feeding America · NotebookLM Synthesis</span>
+      </div>
+    </div>
+ 
+    <div class="finding">
+      <span class="num">F5</span>
+      <div class="text">
+        <strong>Stigma suppresses use — dignity-first design is a functional requirement</strong>
+        <span>Reddit threads in r/SNAP document users describing real relief when a resource required no ID or account. Shame significantly affects whether people seek food assistance at all. FreshFind never requires a login, and contributor identities are never shown.</span>
+        <span class="src">Source: Reddit/r/SNAP · Needfinding Guide Category 4</span>
+      </div>
+    </div>
+ 
+    <div class="finding">
+      <span class="num">F6</span>
+      <div class="text">
+        <strong>Community trust beats formal listings — FreshFind must digitize it</strong>
+        <span>COVID-era mutual aid on Facebook and WhatsApp became the most trusted source of food resource information. The synthesis documents neighbors sharing produce across fences. Frictionless, anonymous community updates are the core trust mechanism.</span>
+        <span class="src">Source: Feeding America 2023 · Needfinding Guide Category 1</span>
+      </div>
+    </div>
+  </section>
+ 
   <section>
     <h2>AI Agent vs. NotebookLM Comparison</h2>
-    <p>The AI Needfinding Agent generated hypotheses that were then checked against real sources in NotebookLM. Three of four agent hypotheses were contradicted or only partially supported.</p>
+    <p>The CSE 400 Needfinding AI Agent generated hypotheses that were then checked against real sources in NotebookLM. Three of four agent hypotheses were contradicted or only partially supported by evidence.</p>
     <table class="he-table">
       <tr><th>AI Agent Hypothesis</th><th>NotebookLM Finding</th><th>Result</th><th>Design Implication</th></tr>
-      <tr><td>Recipes and dietary filters are the primary need</td><td>Users need real-time status and SNAP tags far more than recipes</td><td>Contradicted</td><td>Drop recipes from v1; prioritize SNAP filters</td></tr>
-      <tr><td>Real-time accuracy is "nice to have"</td><td>Stale data is the #1 reason for app abandonment (F1)</td><td>Contradicted</td><td>Live timestamps are a core feature, not optional</td></tr>
-      <tr><td>Show nearest resource as default</td><td>Routine persistence: proximity alone is insufficient</td><td>Partially supported</td><td>Add route-based "Stop on My Way" alongside proximity</td></tr>
-      <tr><td>Identity-based reviews build trust</td><td>Account creation drives abandonment; anonymity builds trust</td><td>Contradicted</td><td>All contributions anonymous — no login ever</td></tr>
+      <tr><td>Recipes and dietary filters are the primary need</td><td>Users need real-time open/closed status and SNAP tags far more than recipes (Synthesis — Food Mirage)</td><td>Contradicted</td><td>Drop recipes from v1; prioritize SNAP filters and live status</td></tr>
+      <tr><td>Real-time accuracy is "nice to have"</td><td>Stale data is the #1 reason people abandon food apps (F1, Reddit, app reviews)</td><td>Contradicted — it is #1 req</td><td>Live timestamps are a core feature, not optional</td></tr>
+      <tr><td>Show nearest resource as default</td><td>Routine persistence: proximity alone is insufficient (Synthesis)</td><td>Partially supported</td><td>Add route-based "On My Way" filter alongside proximity</td></tr>
+      <tr><td>Identity-based reviews build community trust</td><td>Account creation drives abandonment; stigma means anonymity builds trust (F5, r/SNAP)</td><td>Contradicted</td><td>All contributions anonymous — no login, no identity, ever</td></tr>
     </table>
   </section>
+ 
   <section>
     <h2>Three Design Tasks</h2>
     <div class="card-grid cols-3">
-      <div class="card"><div class="card-tag">Task 1</div><h3>Check If a Pantry Is Open</h3><p><strong>User:</strong> Joe, South Bronx, heading home from work.<br>Addresses F1 (stale data), F4 (transit distance), F6 (community trust).</p></div>
-      <div class="card"><div class="card-tag">Task 2</div><h3>Switch App Language</h3><p><strong>User:</strong> Marie, first-time Spanish-speaking user.<br>Addresses language access barrier, F3 affordability-first UX.</p></div>
-      <div class="card"><div class="card-tag">Task 3</div><h3>Submit a Status Update</h3><p><strong>User:</strong> Steven, leaving a pantry that ran out of produce.<br>Addresses F1 (accuracy), F5 (anonymity), F6 (community as trust).</p></div>
+      <div class="card">
+        <div class="card-tag">Task 1 · Goal: Real-Time Accuracy</div>
+        <h3>Check If a Pantry Is Open</h3>
+        <p><strong>User:</strong> Joe, South Bronx, heading home from work after his shift.<br><br>Joe opens FreshFind, sees a map with color-coded and shape-differentiated pins, taps a green checkmark pin, and immediately sees the pantry's current status and the community-verified timestamp. He filters by walking distance and gets directions.<br><br><em>Addresses F1 (stale data), F4 (transit distance), F6 (community trust)</em></p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Task 2 · Goal: Equitable Access</div>
+        <h3>Switch App Language</h3>
+        <p><strong>User:</strong> Marie, first-time Spanish-speaking user opening FreshFind.<br><br>Marie sees a language picker on first launch with languages shown in their own scripts. She selects Español. The entire app — search bar, filters, listing names, community notes, navigation — renders in Spanish. She finds a nearby despensa with SNAP accepted.<br><br><em>Addresses language access barrier, F3 affordability-first UX</em></p>
+      </div>
+      <div class="card">
+        <div class="card-tag">Task 3 · Goal: Community Contribution</div>
+        <h3>Submit a Status Update</h3>
+        <p><strong>User:</strong> Steven, leaving a pantry that just ran out of fresh produce.<br><br>Steven opens the listing, taps Update Status, and selects "Out of Fresh Produce" from a quick-tap menu. No account or login is required. The update goes live immediately. A 5-minute undo timer lets him reverse it if he made a mistake.<br><br><em>Addresses F1 (accuracy), F5 (anonymity/dignity), F6 (community as trust)</em></p>
+      </div>
     </div>
   </section>
+ 
 </main>
-<footer><p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp; <a href="https://github.com/fredjoseph/freshfind-hci">GitHub Repository</a></p></footer>
+<footer>
+  <p>FreshFind — CSE 400 HCI Project &nbsp;|&nbsp; Fred Joseph &nbsp;|&nbsp;
+  <a href="https://github.com/fredj04/FreshFind-hci">GitHub Repository</a></p>
+</footer>
 </body></html>
